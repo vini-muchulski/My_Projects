@@ -107,7 +107,7 @@ class Ui_TextToAudio(object):
 
     def retranslateUi(self, TextToAudio):
         _translate = QtCore.QCoreApplication.translate
-        TextToAudio.setWindowTitle(_translate("TextToAudio", "MainWindow"))
+        TextToAudio.setWindowTitle(_translate("TextToAudio", "Text To Audio"))
         self.label.setText(_translate("TextToAudio", " Texto para áudio - Informe o texto abaixo:"))
         self.btn_rodar.setText(_translate("TextToAudio", "Rodar"))
         self.btn_save_txt.setText(_translate("TextToAudio", "Salvar Texto"))
