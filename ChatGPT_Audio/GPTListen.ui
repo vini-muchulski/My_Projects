@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GPTListen</class>
+ <widget class="QMainWindow" name="GPTListen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>931</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(243, 238, 234)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_api_gpt">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	
+	background-color: rgb(85, 170, 127);
+	
+	color: rgb(0, 85, 0);
+
+border-radius:10px
+}
+
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 0);
+
+	
+	
+}</string>
+    </property>
+    <property name="text">
+     <string>Ativar API</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="api_gpt">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>251</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_sair">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	
+	background-color: rgb(85, 170, 127);
+	
+	color: rgb(0, 85, 0);
+
+border-radius:10px
+}
+
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 0);
+
+	
+	
+}</string>
+    </property>
+    <property name="text">
+     <string>Sair</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>441</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>GPT:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="gpt_texto"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_ouvir_resposta">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	
+	background-color: rgb(85, 170, 127);
+	
+	color: rgb(0, 85, 0);
+
+border-radius:10px
+}
+
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 0);
+
+	
+	
+}</string>
+    </property>
+    <property name="text">
+     <string>Ouvir Resposta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_enviar_prompt">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>308</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	
+	background-color: rgb(85, 170, 127);
+	
+	color: rgb(0, 85, 0);
+
+border-radius:10px
+}
+
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 0);
+
+	
+	
+}</string>
+    </property>
+    <property name="text">
+     <string>Enviar Prompt</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>81</y>
+      <width>258</width>
+      <height>213</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+
+	
+	background-color: rgb(85, 170, 127);
+	
+	color: rgb(0, 85, 0);
+
+border-radius:10px
+}
+
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 0);
+
+	
+	
+}</string>
+       </property>
+       <property name="text">
+        <string>Digite aqui: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="texto_prompt"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_sair</sender>
+   <signal>clicked()</signal>
+   <receiver>GPTListen</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
