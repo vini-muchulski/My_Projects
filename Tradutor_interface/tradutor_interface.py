@@ -20,6 +20,7 @@ import pyperclip
 
 class Ui_Tradutor(object):
     def setupUi(self, Tradutor):
+        Tradutor.setWindowIcon(QtGui.QIcon('logo.jpeg'))
         Tradutor.setObjectName("Tradutor")
         Tradutor.resize(803, 624)
         font = QtGui.QFont()
