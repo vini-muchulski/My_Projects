@@ -8,14 +8,12 @@ A interface conta com:
 
 - Um campo para inserir o link do arquivo a ser baixado
 - Um botão para iniciar o download
-- Uma barra de progresso para mostrar o status do download
-- Um rótulo para mostrar o arquivo baixado (imagem)
+
 
 ## Funcionalidades
 
 - Faz o download do arquivo fornecido no link para o diretório do projeto
-- Mostra uma barra de progresso durante o download 
-- Exibe a imagem baixada (caso seja uma imagem)
+
 
 ## Para executar
 
@@ -35,14 +33,12 @@ The interface features:
 
 - A field to insert the link to the file to be downloaded
 - A button to start the download
-- A progress bar to show download status  
-- A label to show the downloaded file (image)
+
 
 ## Functionalities
 
 - Downloads the file from the provided link to the project directory
-- Shows a progress bar during the download
-- Displays the downloaded image (if it's an image)
+
 
 ## To run
 
