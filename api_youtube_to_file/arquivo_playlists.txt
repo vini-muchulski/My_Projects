@@ -1,0 +1,10 @@
+Titulo do video -> Link
+
+Curso Básico de SQL para Análise de Dados -> https://www.youtube.com/playlist?list=PL5TJqBvpXQv5n1N15kcK1m9oKJm_cv-m6
+Pythonic -> https://www.youtube.com/playlist?list=PLP_dh3S9H39nSDKOZCtR3Hj98ZVUg-_sj
+Química a nossa Volta -> https://www.youtube.com/playlist?list=PLksgsMD1sK6LFoBkI6tzrBU-raFy5cF2S
+Uma molécula por dia 2022 -> https://www.youtube.com/playlist?list=PLksgsMD1sK6KOy-O9Ln7w1M6LK11nDI7h
+Como Computadores Funcionam? -> https://www.youtube.com/playlist?list=PLdsnXVqbHDUcQIuiH9b-i9A85H3A2ZW5W
+Math for Game Devs [2022] -> https://www.youtube.com/playlist?list=PLImQaTpSAdsArRFFj8bIfqMk2X7Vlf3XF
+How do Computers Work? -> https://www.youtube.com/playlist?list=PL6rx9p3tbsMsZ9hUvU-kDOXc8Fot04Hhu
+Electronics & Electrical -> https://www.youtube.com/playlist?list=PLuUdFsbOK_8o1BzPcXHwILC7UN0MmTo5-
