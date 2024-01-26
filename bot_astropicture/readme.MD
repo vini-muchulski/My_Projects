@@ -4,9 +4,9 @@ Este projeto consiste em dois arquivos Python para baixar a imagem astronômica 
 ## raspagem_img.py
 Este script faz scrape do site APOD usando Requests e BeautifulSoup para obter:
 
-    A URL da imagem do dia
-    O título da imagem
-    A explicação da imagem
+A URL da imagem do dia
+O título da imagem
+A explicação da imagem
 Ele salva a imagem localmente e grava o título + hashtags em um arquivo txt.
 
 # tweet.py
