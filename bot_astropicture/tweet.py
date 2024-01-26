@@ -1,4 +1,5 @@
 import tweepy
+import subprocess
 from keys import api_key, api_key_secret, access_token, access_token_secret, bearer_token
 
 
@@ -11,7 +12,7 @@ auth = tweepy.OAuth1UserHandler(api_key,api_key_secret,access_token,access_token
 api= tweepy.API(auth)
 
 #client.create_tweet(text="teste 25 01 20:33hrs")
-
+subprocess.run(["python", "raspagem_img.py"])
 
 imagem = "imagem.jpg"
 tweet_titulo = ""
