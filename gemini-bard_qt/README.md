@@ -28,8 +28,6 @@ Ao digitar uma prompt e clicar em "Enviar", a prompt é enviada para o chat ativ
 ## Instalação
 
 - Clonar repositório
-- Instalar requisitos com `pip install -r requirements.txt` 
 - Obter chave de API do Google
-- Preencher chave em `keys.py`
 - Executar `python controle.py`
 
