@@ -1,7 +1,5 @@
 # Satellite Image Bot
 
-@terra_fotos_bot
-
 This Python script automates the process of fetching satellite images from specific websites and posting them on Twitter. It utilizes Selenium for web automation and Tweepy for interacting with the Twitter API.
 
 ## How it works

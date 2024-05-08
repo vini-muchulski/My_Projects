@@ -39,3 +39,4 @@ with open(nome_arquivo, 'wb') as arquivo:
     resposta = requests.get(url_imagem)
     arquivo.write(resposta.content)
     #print(requests.get(url_imagem))
+    print("imagem baixada")
