@@ -1,0 +1,4 @@
+pyuic5 interface.ui -o interface.py -x
+
+formulario.setWindowIcon(QtGui.QIcon('logo.jpeg'))
+formulario.setWindowTitle("Interface")
