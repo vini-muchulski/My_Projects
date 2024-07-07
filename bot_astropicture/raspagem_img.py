@@ -1,28 +1,57 @@
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
+import wget
 import requests
 from bs4 import BeautifulSoup
-import re
+import os
 
 
-def baixar_img(url,nome_arquivo):
-    requisicao = requests.get(url)
+link = "https://apod.nasa.gov/apod/astropix.html"
+headers =  {"User-Agent" : 
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"}
+requisicao = requests.get(link,headers=headers)
+site = BeautifulSoup(requisicao.text, "html.parser")
 
-    if (requisicao.status_code == 200):
-        with open(nome_arquivo,"wb") as arquivo:
-            arquivo.write(requisicao.content)
 
-        print("imagem baixada")
+def baixar_img(nome_arquivo):
+    # Configurar as opções do Chrome para modo headless
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  
+    chrome_options.add_argument("--disable-gpu")  
+    chrome_options.add_argument("--window-size=1920x1080")  
+
+
+    servico = Service(ChromeDriverManager().install())
+    navegador = webdriver.Chrome(service=servico, options=chrome_options)
+
+
+    link = "https://apod.nasa.gov/apod/astropix.html"
+    navegador.get(link)
     
-    else:
-        print("erro ao baixar")
+    try:
+        img_link = navegador.find_element(By.XPATH, '/html/body/center[1]/p[2]/a')
+        href_value = img_link.get_attribute('href')
+        print(href_value)
 
-def get_imagem_url(site):
-    imagem = site.find_all("img")
-    #print(imagem[0])
 
-    url_imagem = imagem[0]['src']
-    url_imagem = "https://apod.nasa.gov/apod/" + url_imagem
+        
+        output_path = r"D:\Codigos\Projects\bot_astropicture\imagem.jpg"
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        if os.path.exists(output_path):
+            os.remove(output_path)
+            print(f"Arquivo antigo removido: {output_path}")
+            
+        wget.download(href_value,out=output_path)
+        
+    except:
+        print("Erro ao baixar a imagem - possivelmente é video")
 
-    return url_imagem
+
 
 def get_titulo_img(site):
     titulo_da_imagem = site.find_all("b")
@@ -34,6 +63,7 @@ def get_titulo_img(site):
 def get_explicacao(site):
     explicacao = site.find_all("p")
     explicacao = str(explicacao[2].text.strip())
+    
     #busca a posicao onde termina a explicacao da imagem
     try:
         posicao_fim_da_explicacao = explicacao.find("Tomorrow's picture:")
@@ -50,20 +80,7 @@ def get_explicacao(site):
 
 
 
-
-link = "https://apod.nasa.gov/apod/astropix.html"
-headers =  {"User-Agent" : 
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"}
-requisicao = requests.get(link,headers=headers)
-site = BeautifulSoup(requisicao.text, "html.parser")
-
-
-
-
-url_imagem = get_imagem_url(site)
-
-
-baixar_img(url_imagem,"imagem.jpg")
+baixar_img("imagem.jpg")
 titulo_da_imagem = get_titulo_img(site)
 explicacao = get_explicacao(site)
 
