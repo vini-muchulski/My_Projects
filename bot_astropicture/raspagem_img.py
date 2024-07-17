@@ -49,7 +49,10 @@ def baixar_img(nome_arquivo):
         wget.download(href_value,out=output_path)
         
     except:
+        nome_imagem = "imagem.jpg"
         print("Erro ao baixar a imagem - possivelmente é video")
+        os.remove(nome_imagem)
+        
 
 
 
