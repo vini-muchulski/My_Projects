@@ -1,6 +1,0 @@
-ola mundo
-este projeto foi feito usando python qt 5
-o objetivo desse projeto é criar um programa que transforme texto em áudio
-e que salve o texto em um arquivo txt
-A utilidade desse projeto é para pessoas com deficiência visual e tambem auxiliar na leitura de textos longos
- 
